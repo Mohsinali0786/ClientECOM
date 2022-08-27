@@ -114,7 +114,7 @@ function Kids() {
             quantity: 1,
         }
         setAddItems([...additems, myobject])
-        // setid(id + 1)
+        setid(id + 1)
     }
     const myalert1 = () => {
         const swalWithBootstrapButtons = Swal.mixin({

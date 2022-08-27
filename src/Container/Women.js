@@ -71,11 +71,12 @@ function Women() {
     const [id, setid] = useState(0)
     const [IsLogin, setislogin] = useState(false)
     const [displaycard, setdisplaycard] = useState(false)
+    const [addClicked, setAddClicked] = useState(false)
 
     const AddItemsInCart = (items) => {
 
 
-
+        setAddClicked(true)
 
         console.log("items in function", items)
         // localStorage.setItem("selectedPeople", JSON.stringify(peopleInfoValue));
@@ -100,6 +101,17 @@ function Women() {
     }
     console.log("Add items state", additems)
 
+    useEffect(()=>{
+
+
+       
+        localStorage.setItem('Women', JSON.stringify({ items: [...additems] }))
+
+
+
+        setAddClicked(false)
+
+    },[addClicked===true])
 
     useEffect(() => {
 
@@ -138,12 +150,12 @@ function Women() {
         }
 
 
-        const sp = localStorage.getItem("Women");
-        console.log('Use Effect Sppppp=>', sp)
-        if (!sp) {
-            console.log('!!!!Spppppppp', !sp)
-            setAddItems([]);
-        }
+        // const sp = localStorage.getItem("Women");
+        // console.log('Use Effect Sppppp=>', sp)
+        // if (!sp) {
+        //     console.log('!!!!Spppppppp', !sp)
+        //     setAddItems([]);
+        // }
     }, [additems])
 
 

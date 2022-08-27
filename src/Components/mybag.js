@@ -129,7 +129,7 @@ const Mybag = () => {
             })
         }
         else if (item_type === 'Kids') {
-            dataFromLSStateKids.items.map((myitems, i) => {
+            dataFromLSStateKids?.items.map((myitems, i) => {
                 console.log('My items-------------------- ', myitems)
                 if (index !== myitems.id) {
                     console.log('If running')
@@ -146,6 +146,8 @@ const Mybag = () => {
                     console.log('My Quan set to initial val', myquan)
 
                 }
+                console.log('dataFromLSStateKids+=++++', dataFromLSStateKids)
+                
                 localStorage.setItem('Kids', JSON.stringify(dataFromLSStateKids))
 
             })
@@ -257,6 +259,10 @@ const Mybag = () => {
                     console.log("i===>", i, index)
 
                     if (index === i) {
+
+                        localStorage.setItem('deldata', JSON.stringify({ items:[Women[index]] }))
+
+
                         Women.splice(index, 1)
                         console.log("Deleted Women====>", Women)
                         // setallbagitems(allbagitems)
