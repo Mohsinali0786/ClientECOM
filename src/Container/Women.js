@@ -99,16 +99,38 @@ function Women() {
         console.log("MyModalData=========>", MyModalData)
 
     }
-    console.log("Add items state", additems)
 
     useEffect(()=>{
 
+        let deldata=JSON.parse(localStorage.getItem('deldata'))
+        console.log('deldata',deldata)
 
-       
-        localStorage.setItem('Women', JSON.stringify({ items: [...additems] }))
+        let name=deldata?.items[0]
+        name=name?.itemName
+        console.log('name=====',name)
+
+      
+        
+        additems.map((v,i)=>{
+            console.log('v.itemName',v.itemName)
+            let myindex=v.itemName.indexOf(name)
+            console.log('myindex=====',myindex)
+
+            if(v.itemName===name){
+                localStorage.removeItem('deldata')
+                console.log('Ifffffffffffffffffff')
 
 
+                additems.splice(myindex,1)
+                console.log('aadditemsuppppppppppp',additems)
 
+                localStorage.setItem('Women', JSON.stringify({ items: [additems] }))
+            }
+        })
+
+
+        
+    console.log("Add items state", additems)
         setAddClicked(false)
 
     },[addClicked===true])
@@ -140,8 +162,9 @@ function Women() {
                         'You Item has been added to cart sucessfuly!',
                         'success'
                     )
+                    console.log("LoginOrNotRRRRRRRRRRRRRRRR====>")
 
-                    localStorage.setItem('Women', JSON.stringify({ items: [...additems] }))
+                    localStorage.setItem('Women', JSON.stringify({ items: [additems] }))
                 }
             }
             else {
