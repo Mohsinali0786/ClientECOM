@@ -39,6 +39,8 @@ function Men() {
     const Navigate = useNavigate()
     const [additems, setAddItems] = useState([])
     const [id, setid] = useState(0)
+    const [addClicked, setAddClicked] = useState(false)
+
 
 
     // for model
@@ -69,6 +71,36 @@ function Men() {
         console.log("MyModalData=========>", MyModalData)
 
     }
+    useEffect(() => {
+
+        let deldata = JSON.parse(localStorage.getItem('deldata'))
+        console.log('deldata', deldata)
+
+        let name = deldata?.items[0]
+        name = name?.itemName
+        console.log('name=====', name)
+        additems.map((v, i) => {
+            console.log('v', v)
+            // let myindex = v.itemName.indexOf(name)
+            let myIndex = additems.findIndex(x => x.itemName === name)
+            console.log('myindex=====', myindex)
+
+            if (v.itemName === name) {
+                localStorage.removeItem('deldata')
+                console.log('Ifffffffffffffffffff')
+                additems.splice(myindex, 1)
+                console.log('aadditemsuppppppppppp', additems)
+
+                localStorage.setItem('Men', JSON.stringify({ items: additems }))
+            }
+        })
+
+
+
+        console.log("Add items state", additems)
+        setAddClicked(false)
+
+    }, [addClicked === true])
 
     useEffect(() => {
 
@@ -97,6 +129,8 @@ function Men() {
 
     }, [additems])
     const AddItemsInCart = (items) => {
+        setAddClicked(true)
+
 
         console.log("Add items in cart", additems)
         var myobject = {

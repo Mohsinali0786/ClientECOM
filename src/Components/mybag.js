@@ -14,6 +14,8 @@ const Mybag = () => {
 
     const [deleteclicked, setdeleteclicked] = useState(false)
     const [TotalItems, setTotalItems] = useState(0)
+
+    const [deletedItem, setDeletedItems] = useState([])
     let WomenItems = 0;
     let MenItems = 0;
     let KidsItems = 0
@@ -45,6 +47,9 @@ const Mybag = () => {
             setdeleteclicked(false)
 
         }
+
+        localStorage.setItem('deldata', JSON.stringify({ items: deletedItem }))
+
 
 
     }, [deleteclicked === true])
@@ -147,7 +152,7 @@ const Mybag = () => {
 
                 }
                 console.log('dataFromLSStateKids+=++++', dataFromLSStateKids)
-                
+
                 localStorage.setItem('Kids', JSON.stringify(dataFromLSStateKids))
 
             })
@@ -259,8 +264,9 @@ const Mybag = () => {
                     console.log("i===>", i, index)
 
                     if (index === i) {
+                        setDeletedItems([...deletedItem, Women[index]])
+                        // localStorage.setItem('deldata', JSON.stringify({ items: [Women[index]] }))
 
-                        localStorage.setItem('deldata', JSON.stringify({ items:[Women[index]] }))
 
 
                         Women.splice(index, 1)
@@ -277,6 +283,8 @@ const Mybag = () => {
                 for (var i = 0; i < Men.length; i++) {
                     console.log("i===>", i, index)
                     if (index === i) {
+                        setDeletedItems([...deletedItem, Men[index]])
+
                         Men.splice(index, 1)
                         console.log("Deleted Men====>", Men)
                         // setallbagitems(allbagitems)

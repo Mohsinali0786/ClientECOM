@@ -100,52 +100,44 @@ function Women() {
 
     }
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        let deldata=JSON.parse(localStorage.getItem('deldata'))
-        console.log('deldata',deldata)
+        let deldata = JSON.parse(localStorage.getItem('deldata'))
+        console.log('deldata', deldata)
 
-        let name=deldata?.items[0]
-        name=name?.itemName
-        console.log('name=====',name)
+        let name = deldata?.items[0]
+        name = name?.itemName
+        console.log('name=====', name)
 
-      
-        
-        additems.map((v,i)=>{
-            console.log('v.itemName',v.itemName)
-            let myindex=v.itemName.indexOf(name)
-            console.log('myindex=====',myindex)
 
-            if(v.itemName===name){
+
+        additems.map((v, i) => {
+            console.log('v.itemName', v.itemName)
+            let myindex = v.itemName.indexOf(name)
+            console.log('myindex=====', myindex)
+
+            if (v.itemName === name) {
                 localStorage.removeItem('deldata')
                 console.log('Ifffffffffffffffffff')
 
 
-                additems.splice(myindex,1)
-                console.log('aadditemsuppppppppppp',additems)
+                additems.splice(myindex, 1)
+                console.log('aadditemsuppppppppppp', additems)
 
-                localStorage.setItem('Women', JSON.stringify({ items: [additems] }))
+                localStorage.setItem('Women', JSON.stringify({ items: additems }))
             }
         })
 
 
-        
-    console.log("Add items state", additems)
+
+        console.log("Add items state", additems)
         setAddClicked(false)
 
-    },[addClicked===true])
+    }, [addClicked === true])
 
     useEffect(() => {
 
-        // Making Problem on reload check it
-        // {
-
-        // console.log('UseEffect additems', additems)
-        // localStorage.setItem('Women', JSON.stringify({ items: [] }))
-        // }
-
         if (additems.length === 0) {
-
 
         }
         else {
@@ -164,7 +156,7 @@ function Women() {
                     )
                     console.log("LoginOrNotRRRRRRRRRRRRRRRR====>")
 
-                    localStorage.setItem('Women', JSON.stringify({ items: [additems] }))
+                    localStorage.setItem('Women', JSON.stringify({ items: [...additems] }))
                 }
             }
             else {
