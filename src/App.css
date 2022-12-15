@@ -3,13 +3,22 @@
   src: url('./Assets//fonts/RubikMarkerHatch-Regular.ttf');
 }
 
-body {
-  background-color: lightblue !important;
-  /* background-color: #00E2E6 !important; */
-  overflow: visible !important;
-  /* background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_437743.jpg'); */
+/* Navigation */
+
+.navbar-link-colors {
+  color: white !important;
+  font-size: large !important;
 }
 
+.navbar-sublink-colors {
+  color: black !important;
+  font-size: large !important;
+}
+
+/* Carousel */
+.Caraousel_Img {
+  width: 50% !important;
+}
 
 /* HomePage CSS */
 
@@ -31,47 +40,27 @@ body {
   color: gray;
 }
 
-.addtocart-btn {
+/* .addtocart-btn {
   width: 100% !important;
   border-radius: 10px 15px 60px 60px !important;
-}
-
-.MuiCardContent-root {
-  height: 120px !important;
-}
-
-.Mob-navbaricons {
-  margin-right: 10px;
-}
-
-.homeimage {
-  /* margin: 70px; */
-  /* transform: scale(1); */
-}
-
-.Home-Section {
-  display: grid;
-  grid-template-columns: 30% 65%;
-}
+} */
 
 @media only screen and (max-width: 1300px) {
-  .homeimage {
+  /* .homeimage {
     margin-top: 20px;
 
     width: 100%;
-  }
+  } */
 }
 
 @media only screen and (max-width: 700px) {
-  .Home-Section {
+  /* .Home-Section {
     display: flex;
     flex-wrap: wrap;
-  }
+  } */
 }
 
 .Home-Section2 {
-
-  background-color: rgb(240, 240, 240);
   font-size: 30px;
   font-family: serif;
   margin-top: 50px;
@@ -82,12 +71,14 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .services {
   text-align: center;
-  /* height: 300px; */
   margin-top: 2%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -99,47 +90,58 @@ body {
 .services>h4 {
   font-size: 20px;
   margin: 20px 50px;
-  /* font-size: ; */
 }
 
-.maincont {
+/* .maincont {
   padding-bottom: 50px;
 
-}
+} */
 
-@keyframes example {
+/* @keyframes example {
   0% {
 
     margin-left: 80%;
   }
 
   100% {
-    /* position: absolute; */
     margin-left: 0%;
     color: red
   }
-}
+} */
 
-.pageheading {
+/* .pageheading {
   position: relative;
   animation-name: example;
   animation-duration: 1s;
-  /* animation-delay: 0.75s; */
   margin-top: 40px;
   font-family: serif;
   font-size: 40px;
-
-
   font-weight: bold;
-}
+} */
 
 /* Card Css */
 
 .Card-main-cont {
+  text-align: right;
+}
+
+.Card-main-cont svg {
+  font-size: 30px !important;
+  visibility: hidden;
+}
+.ViewDes-Btn{
+  visibility: hidden;
+}
+.Card-main-cont:hover > svg{
+  visibility:visible ;
+}
+.Card-main-cont:hover  .ViewDes-Btn{
+  visibility: visible;
+}
+
+/* .Card-main-cont {
 
   Width: 200px;
-  /* margin-top: 30px; */
-  /* margin-bottom: 20px; */
   border-radius: 30px 30px 0px 0px !important;
 
 }
@@ -149,7 +151,6 @@ body {
   justify-content: space-evenly;
   padding-left: 20px;
   flex-wrap: wrap;
-  /* margin-top: 300px; */
 }
 
 @keyframes slideInLeft {
@@ -180,118 +181,65 @@ body {
   100% {
     margin-left: 0%;
   }
-}
+} */
 
-.MuiTypography-root {
-  font-size: 20px !important;
-}
 
-.MuiPaper-root {
-  border-radius: 50px;
-}
 
 /* Women ,Man and Kids Cards */
 .productcard {
-
   border-radius: 30px;
   animation-name: example2;
   animation-duration: 2s;
   margin: 10px;
-  /* padding-bottom: 20px; */
   background-color: white;
   text-align: center;
   border: 2px solid;
 }
 
-.modal {
+/* .modal {
   margin: 20px;
-}
+} */
 
-.productcard:hover {
+/* .productcard:hover {
   transform: scale(1.05)
-}
+} */
 
-.linkstyling {
+/* .linkstyling {
   color: black;
   text-decoration: none;
-}
+} */
 
-.mlinkstyling {
+/* .mlinkstyling {
   color: black;
   text-decoration: none;
-}
+} */
 
-.MuiToolbar-root {
-  background-color: rgb(240, 240, 240);
-  height: 20px;
-  color: black;
 
-}
 
 .p-img {
-  /* border-radius: 50px; */
   width: 100%;
   height: 220px;
 }
 
-/* .MuiGrid-root {
-  width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-
-
-
-
-/* .quan-btn {
-  width: 5vh;
-  height: 40px;
-  margin-left: 20px !important;
-
-  background-color: green !important;
-} */
-
-
-
-
-/* .lists2>h4 {
-  padding-left: 40px;
-} */
-
-/* .lists2>.quan-btn {
-  text-align: center;
-  margin-top: 20px;
-} */
-
-/* h1 {
-  text-align: center;
-} */
-
-/* h4 {
-  text-align: right;
-} */
-.D-quan-btn>button:nth-child(2) {
+/* .D-quan-btn>button:nth-child(2) {
   margin-left: 30px;
 
-}
+} */
 
-.D-quan-btn {
+/* .D-quan-btn {
   display: flex;
   flex: 1;
-}
+} */
 
-.quan-btn {
+/* .quan-btn {
   width: 5%;
-}
+} */
 
-.del-btn {
-  /* width: 100%; */
-
+/* .del-btn {
   margin-top: 20px !important;
-}
+} */
 
-@media only screen and (max-width: 450px) {
+/* @media only screen and (max-width: 450px) {
   .update-quantity {
     display: flex;
     flex-direction: column;
@@ -302,17 +250,12 @@ body {
     text-align: left;
 
   }
-}
+} */
 
 /* Mybag Css */
-.emptycart-text {
+/* .emptycart-text {
   font-size: 30px !important;
   text-align: center;
-}
-
-.ant-modal-body {
-
-  /* background-color: #00E2E6; */
 }
 
 .Bag-maindiv {
@@ -358,20 +301,19 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
+} */
 
 
 
 /* # Forms CSS */
 
-.ant-form {
+/* .ant-form {
   margin-top: 5% !important;
 }
 
 .form-h2 {
 
   font-size: 30px;
-  /* margin-top: 10%; */
   text-align: center;
   margin-bottom: 35px;
 }
@@ -382,21 +324,8 @@ body {
 
 }
 
-.signin-formcontainer {
-  /* border-radius: 20px;
-  margin: 10%;
-  width: 70%; */
-
-  /* border: 1px solid black; */
-  /* text-align: center; */
-  /* background-image: linear-gradient(to top right, rgb(122, 101, 172), rgb(0, 255, 145)); */
-
-
-}
-
 .form-section {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
 }
 
@@ -440,9 +369,6 @@ body {
 @media only screen and (max-width: 620px) {
   .form-image {
     display: none;
-    /* width: 50%;
-    height: 70%;
-    margin-top: 30%; */
   }
 
   .signin-formstyling {
@@ -464,7 +390,6 @@ body {
 
 .mymodal {
   margin-left: 20% !important;
-  /* text-align: center; */
 }
 
 .modalimage {
@@ -481,4 +406,4 @@ body {
   .css-5fr58b {
     margin-top: 150px;
   }
-}
+} */

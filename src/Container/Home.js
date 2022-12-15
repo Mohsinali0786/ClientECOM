@@ -1,5 +1,5 @@
 import { Button, Grid, Container } from "@mui/material";
-import ResponsiveAppBar from '../Components/navbar'
+// import ResponsiveAppBar from '../Components/navbar'
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
 import BookOnlineTwoToneIcon from '@mui/icons-material/BookOnlineTwoTone';
 import GridViewTwoToneIcon from '@mui/icons-material/GridViewTwoTone';
@@ -18,7 +18,7 @@ function Home() {
         <Container className='maincont'>
             <Grid>
                 <Grid>
-                    <ResponsiveAppBar />
+                    {/* <ResponsiveAppBar /> */}
                 </Grid>
 
                 <h1 className="onlinemall">Your E-Shopping Mall</h1>

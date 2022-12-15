@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from '../Container/Home'
+import {Home} from '../Container'
 import Women from '../Container/Women'
 import Men from '../Container/Men'
 import Kids from '../Container/Kids'
@@ -12,12 +12,12 @@ import SignUp from '../Container/signup'
 var Allpaths = [
 
     { path: '/', Component: Home },
-    { path: '/women', Component: Women },
-    { path: '/men', Component: Men },
-    { path: '/kids', Component: Kids },
-    { path: '/webbag', Component: WebMybag },
-    { path: '/form', Component: MyForm },
-    { path: '/signup', Component: SignUp }
+    // { path: '/women', Component: Women },
+    // { path: '/men', Component: Men },
+    // { path: '/kids', Component: Kids },
+    // { path: '/webbag', Component: WebMybag },
+    // { path: '/form', Component: MyForm },
+    // { path: '/signup', Component: SignUp }
 
 ]
 
