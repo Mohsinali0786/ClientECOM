@@ -18,6 +18,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
 import { PrimarySearchAppBar } from '../index'
+import { SignUpModal } from '../index';
 
 
 // import {MenuItem } from '@mui/material';
@@ -25,7 +26,7 @@ import { useState } from "react";
 
 const socialicons = [{ icon: <FacebookIcon />, url: socialLinks?.facebook, name: 'Facebook' }, { icon: <InstagramIcon />, url: socialLinks?.instagram, name: 'Instagram' }, { icon: <GitHubIcon />, url: socialLinks?.github, name: 'Github' }, { icon: <LinkedInIcon />, url: socialLinks?.linkedin, name: 'Linkend' }];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const pages = [{ name: 'Home', url: '' }, { name: 'Products', url: '', Items: ["Men","Women","Kids"] }, { name: 'About-Us', url: '' }, { name: 'Contact-Us', url: '' }]
+const pages = [{ name: 'Home', url: '' }, { name: 'Products', url: '', Items: ["Men", "Women", "Kids"] }, { name: 'About-Us', url: '' }, { name: 'Contact-Us', url: '' }]
 
 function Navigation() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -100,7 +101,7 @@ function Navigation() {
 
                     </Typography>
 
-                    <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex',justifyContent:'space-around'}}}>
+                    <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex', justifyContent: 'space-around' } }}>
                         {pages?.map((page, index) => (
                             <PrimarySearchAppBar navbarLink={page} />
                         ))}
@@ -154,6 +155,7 @@ function Navigation() {
                                 </MenuItem>
                             ))}
                         </Menu>
+
                     </Box>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'space-around' }, }}>
@@ -169,6 +171,7 @@ function Navigation() {
                             </a>
                         ))}
                     </Box>
+                    <SignUpModal />
                 </Toolbar>
             </Container>
         </AppBar>
