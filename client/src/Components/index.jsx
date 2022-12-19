@@ -4,6 +4,7 @@ import MyCarousel from './Carousel/Carousel'
 import Card from './Cards/card'
 import SignUpModal from './Modal/Signup'
 import SigninModal from './Modal/Signin'
+import MyDrawer from './Drawer/drawe'
 
 
 export {
@@ -12,6 +13,7 @@ export {
     MyCarousel,
     Card,
     SignUpModal,
-    SigninModal
+    SigninModal,
+    MyDrawer,
     // socialLinks,
 }

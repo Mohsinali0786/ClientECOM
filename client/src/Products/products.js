@@ -18,57 +18,57 @@ var Products = [
         Name: 'T-Shirt 1',
         img: Tshirt1,
         price: 17,
-        catageory:'Men',
-        
+        catageory: 'Men',
+
     },
     {
         id: 2,
         Name: 'T-Shirt 2',
         img: Tshirt2,
         price: 13,
-        catageory:'Men',
+        catageory: 'Men',
     },
     {
         id: 3,
         Name: 'T-Shirt 3',
         img: Tshirt3,
         price: 19,
-        catageory:'Men',
+        catageory: 'Men',
     },
     {
         id: 4,
         Name: '3 Pc Suit',
         img: Mensuit1,
         price: 31,
-        catageory:'Men',
+        catageory: 'Men',
     },
     {
         id: 5,
         Name: 'JJsuit',
         img: JJsuit,
         price: 15,
-        catageory:'Men',
+        catageory: 'Men',
     },
     {
         id: 6,
         Name: 'Women Dress Design-1',
         img: img1,
         price: 25,
-        catageory:'Women',
+        catageory: 'Women',
     },
     {
         id: 7,
         Name: 'Chiffon Long dress',
         img: img2,
         price: 15,
-        catageory:'Women',
+        catageory: 'Women',
     },
     {
         id: 8,
         Name: 'Stylish Dress',
         img: stylishdress,
         price: 30,
-        catageory:'Women',
+        catageory: 'Women',
     },
 
     {
@@ -76,14 +76,14 @@ var Products = [
         Name: 'Dress-1',
         img: Girldress1,
         price: 8,
-        catageory:'Kids',
+        catageory: 'Kids',
     },
     {
         id: 10,
         Name: 'Frock-1',
         img: GirlFrocks1,
         price: 11,
-        catageory:'Kids,'
+        catageory: 'Kids',
     },
 
 ]

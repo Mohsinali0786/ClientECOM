@@ -19,6 +19,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
 import { PrimarySearchAppBar } from '../index'
 import { SignUpModal } from '../index';
+import {MyDrawer} from '../index';
 
 
 // import {MenuItem } from '@mui/material';
@@ -56,7 +57,7 @@ function Navigation() {
     };
 
     return (
-        <AppBar position="static" elevation={0} sx={{ backgroundColor: 'black' }}>
+        <AppBar elevation={0} sx={{ backgroundColor: 'black',position:'fixed',top:'0px'}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -172,6 +173,7 @@ function Navigation() {
                         ))}
                     </Box>
                     <SignUpModal />
+                    <MyDrawer/>
                 </Toolbar>
             </Container>
         </AppBar>
