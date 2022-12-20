@@ -5,6 +5,7 @@ import Card from './Cards/card'
 import SignUpModal from './Modal/Signup'
 import SigninModal from './Modal/Signin'
 import MyDrawer from './Drawer/drawe'
+import Products from './Modal/productModal'
 
 
 export {
@@ -15,5 +16,6 @@ export {
     SignUpModal,
     SigninModal,
     MyDrawer,
+    Products,
     // socialLinks,
 }

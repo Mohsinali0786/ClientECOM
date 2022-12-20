@@ -5,6 +5,8 @@ import { useCart } from 'react-use-cart';
 import { Divider } from '@mui/material';
 import { useEffect } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { addProducts } from '../../Utils/helper';
+import {Products} from '../index'
 const MyDrawer = () => {
     const [open, setOpen] = useState(false);
     const { items, updateItemQuantity, removeItem, isEmpty } = useCart()
@@ -36,6 +38,7 @@ const MyDrawer = () => {
                 destroyOnClose
                
             >
+                <Products/>
                 {
                     isEmpty ?
                         <h3>Your Cart is Empty</h3>

@@ -57,7 +57,7 @@ function Navigation() {
     };
 
     return (
-        <AppBar elevation={0} sx={{ backgroundColor: 'black',position:'fixed',top:'0px'}}>
+        <AppBar elevation={0} sx={{ backgroundColor: '#191919',position:'fixed',top:'0px'}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography

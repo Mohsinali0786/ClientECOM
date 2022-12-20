@@ -6,8 +6,13 @@ import { Typography, Button } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import {useCart } from "react-use-cart";
+import axios from 'axios'
 function MediaCard({ data }) {
     const { addItem } = useCart();
+    const addItemfunction=(data)=>{
+        addItem(data)
+      
+    }
     return (
         <Card className='Card-main-cont'>
             <FavoriteIcon />
@@ -24,7 +29,7 @@ function MediaCard({ data }) {
                 <Rating name="read-only" value={3} readOnly />
             </CardContent>
             <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>
-                <Button variant='contained' className='AddtoCart-Btn' onClick={() => addItem(data)}>Add to Cart</Button>
+                <Button variant='contained' className='AddtoCart-Btn' onClick={() => addItemfunction(data)}>Add to Cart</Button>
             </Typography>
             <CardActions>
             </CardActions>

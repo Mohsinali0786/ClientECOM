@@ -59,7 +59,7 @@
 }
 
 /* The element to apply the animation to */
-.Card-main-cont:hover svg {
+.Card-main-cont:hover > svg {
 
   animation-name: example;
   animation-duration: 1s;
@@ -208,7 +208,7 @@
   text-align: right;
 }
 
-.Card-main-cont svg {
+.Card-main-cont > svg {
   font-size: 30px !important;
   visibility: hidden;
 }
