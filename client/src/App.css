@@ -22,21 +22,60 @@
 
 
 /* Modal SignUp */
-.Login-Signup-Btn{
+.Login-Signup-Btn {
   background-color: #191919 !important;
   border: none !important;
 }
-.signup-btn{
+
+.signup-btn {
   width: 100% !important;
 }
-.auth-link{
+
+.auth-link {
   display: flex;
   justify-content: end;
   margin-bottom: 20px;
 }
+
 .Card-main-cont {
   border-radius: 30px 30px 0px 0px !important;
 
+}
+
+/* Drawer CSS Cart-Item */
+
+
+
+.Cart-Items{
+  padding-bottom: 20px;
+
+}
+
+.Cart-Items :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Cart-Items :nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Cart-Items :nth-child(2) :nth-child(2) {
+  flex-direction: column;
+}
+
+.Cart-Items :nth-child(2) :nth-child(2) :nth-child(2) {
+  flex-direction: row;
+}
+.Cart-Items :nth-child(2) :nth-child(2) :nth-child(2) >p{
+  padding: 15px;
+}
+
+.Cart-Items :nth-child(3) {
+  display: flex !important;
+  justify-content: right !important;
 }
 
 /* HomePage CSS */
@@ -148,13 +187,16 @@
   font-size: 30px !important;
   visibility: hidden;
 }
-.ViewDes-Btn{
+
+.ViewDes-Btn {
   visibility: hidden;
 }
-.Card-main-cont:hover > svg{
-  visibility:visible ;
+
+.Card-main-cont:hover>svg {
+  visibility: visible;
 }
-.Card-main-cont:hover  .ViewDes-Btn{
+
+.Card-main-cont:hover .ViewDes-Btn {
   visibility: visible;
 }
 
