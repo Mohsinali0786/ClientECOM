@@ -23,8 +23,8 @@ function MediaCard({ data }) {
                 </Typography>
                 <Rating name="read-only" value={3} readOnly />
             </CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-                <Button className='ViewDes-Btn' onClick={() => addItem(data)}>Add to Cart</Button>
+            <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>
+                <Button variant='contained' className='AddtoCart-Btn' onClick={() => addItem(data)}>Add to Cart</Button>
             </Typography>
             <CardActions>
             </CardActions>
