@@ -9,7 +9,7 @@ const itemSchema=moongoose.Schema({
     stock:NUMBER,
     isDeleted: BOOLEAN_DEFAULT,
     createdBt:CREATED_DATE,
-    userid:REF_OBJECT_ID,
+    // userid:REF_OBJECT_ID,
 })
 
 let User=moongoose.model("Cart-Items",itemSchema);

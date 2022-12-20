@@ -2,6 +2,7 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { SigninModal } from '..';
 import React, { useState } from 'react';
 import { Button, Modal, Checkbox, Form, Input } from 'antd';
+import { registerUser } from '../../Utils/helper';
 const SignUp = ({ issignin, modalState }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,6 +21,7 @@ const SignUp = ({ issignin, modalState }) => {
     };
     const onFinish = (values) => {
         console.log('Success:', values);
+        registerUser(values)
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);

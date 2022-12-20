@@ -16,8 +16,15 @@ const addProducts = (data) => {
     })
 }
 
-const registerUser=()=>{
-    axios.post(`http://localhost:4000${AUTH?.REGISTER}`)
+const registerUser=(data)=>{
+    console.log('Data',AUTH?.REGISTER)
+    axios.post(`http://localhost:4000/${AUTH?.REGISTER}`,data).then((res)=>{
+        const data={res}
+        successMessage(data.message)
+    }).catch((err)=>{
+        console.log('Error in register user axios',err)
+        errorMessage(data.message)
+    })
 }
 
 const successMessage = (desc = 'Successfully Complete!') => {
